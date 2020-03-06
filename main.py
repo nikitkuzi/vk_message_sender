@@ -9,7 +9,7 @@ if __name__=="__main__":
     myId = vk.users.get()[0]['id']
     
     # group_id - short name
-    # Examle: https://vk.com/repetitorysimferopolya
+    # Example: https://vk.com/repetitorysimferopolya
     groupsId_to_send = [
         vk.groups.getById(group_id="repetitorysimferopolya")[0]['id'],
         vk.groups.getById(group_id="repetitorsimf")[0]['id'],
