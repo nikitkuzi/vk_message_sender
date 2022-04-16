@@ -6,19 +6,12 @@ if __name__=="__main__":
         vk_session = vk_api.VkApi(token=f.read())
     
     vk = vk_session.get_api()
-    msg = """Репетитор по математике и информатике
-- ОГЭ\ЕГЭ Математика
-- ОГЭ\ЕГЭ Информатика
-- Повторение и изучение школьного материала, а так же выполнение домашнего задания.
-- Выполнение лабораторных работ, контрольных работ, Excel и Word.
-- Написание программ на Java  Python.
-К каждому ученику индивидуальный подход, который будет завлекать его к учебе и давать качественный результат
-Занятия онлайн. По всем вопросам обращаться в лс и по тел. +79787283681 (Viber, WhatsApp)"""
+    msg = """message to post"""
     myId = vk.users.get()[0]['id']
     
     # group_ids - short name
     # Example: https://vk.com/repetitorovnet
-    group_ids = ["repetitorovnet", "club12150271", "repetitorysimferopol", "my.tutors", "home_tutor", "my.tutor", "club153005273", "tvoyprepod", "repetitor_moscow_77", "club23026278", "repetitory_rus"]
+    group_ids = ["id1", "id2"]
     groupsId_to_send = []
 
     # Create array of groups to send post to
@@ -28,7 +21,7 @@ if __name__=="__main__":
     # find photo id to send, where the first photo in the list is the last you added to your albums
     # for photoes in vk.photos.getAll(owner_id=myId)['items']:
         # print("id:", photoes['id'], "url:", photoes['sizes'][0]['url'])
-    photoesId_to_send = ["457241095"]
+    photoesId_to_send = ["id1"]
 
     # send post
     for groups in groupsId_to_send:
